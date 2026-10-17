@@ -256,44 +256,50 @@ export const searchIndex = [
   {
     title: "Definition: What is Conditional Rendering?",
     type: "Concept",
-    path: "/#definition",
-    keywords: "definition what is conditional rendering meaning basics concept"
+    path: "/learn#definition",
+    keywords: "definition what is conditional rendering meaning basics concept foundation"
   },
   {
     title: "How Conditional Rendering Works (4-Step Workflow)",
     type: "Workflow",
-    path: "/#how-it-works",
-    keywords: "how it works flow steps condition evaluate render update state"
+    path: "/learn#how-it-works",
+    keywords: "how it works flow steps condition evaluate render update state workflow"
   },
   {
     title: "if/else Statement Method",
     type: "Method",
     path: "/learn#if-else",
-    keywords: "if else statements javascript early return branches"
+    keywords: "if else statements javascript early return branches method"
   },
   {
     title: "Ternary Operator (? : ) Method",
     type: "Method",
     path: "/learn#ternary",
-    keywords: "ternary operator inline jsx condition question mark colon either or"
+    keywords: "ternary operator inline jsx condition question mark colon either or method"
   },
   {
     title: "Logical AND (&&) Operator Method",
     type: "Method",
     path: "/learn#logical-and",
-    keywords: "logical and operator ampersand show hide condition truthy falsy"
+    keywords: "logical and operator ampersand show hide condition truthy falsy method"
   },
   {
     title: "State-Driven Rendering with useState",
     type: "Method",
     path: "/learn#use-state",
-    keywords: "state usestate hooks toggle click dynamic interactive button"
+    keywords: "state usestate hooks toggle click dynamic interactive button method"
+  },
+  {
+    title: "Which Method Should You Choose? (Decision Helper)",
+    type: "Guide",
+    path: "/learn#decision-helper",
+    keywords: "decision helper recommendation guide which method choose comparison"
   },
   {
     title: "Login and Logout Status Example",
     type: "Example",
     path: "/examples/login-logout",
-    keywords: "login logout auth authentication alex welcome dashboard ternary"
+    keywords: "login logout auth authentication alex welcome dashboard ternary interactive"
   },
   {
     title: "Show and Hide Password Example",
@@ -308,21 +314,33 @@ export const searchIndex = [
     keywords: "loading spinner data fetch async simulated api status user profile"
   },
   {
-    title: "Common Mistakes: = vs ===",
-    type: "Mistake",
-    path: "/#mistakes",
-    keywords: "mistakes bugs assignment comparison equality strict"
+    title: "Explore Practical Examples Section",
+    type: "Section",
+    path: "/#examples-section",
+    keywords: "examples practical cards showcase hands on practice interactive"
   },
   {
-    title: "Common Mistakes: 0 && <Element />",
-    type: "Mistake",
-    path: "/#mistakes",
-    keywords: "mistakes zero numbers array length logical and bugs"
+    title: "Home Page (Hero & Practice)",
+    type: "Page",
+    path: "/",
+    keywords: "home start overview hero introduction"
   },
   {
-    title: "React Hooks, Props, and Routes Guide",
-    type: "Guide",
-    path: "/#hooks-props-routes",
-    keywords: "hooks props routes react router dom usestate components navigation"
+    title: "Learn Guide (All Concepts & Methods)",
+    type: "Page",
+    path: "/learn",
+    keywords: "learn guide tutorials methods definition workflow documentation"
+  },
+  {
+    title: "Interactive Examples Gallery",
+    type: "Page",
+    path: "/examples",
+    keywords: "examples gallery apps interactive sandbox practice"
+  },
+  {
+    title: "About React Learn Project",
+    type: "Page",
+    path: "/about",
+    keywords: "about author mission tech stack features react vite"
   }
 ];

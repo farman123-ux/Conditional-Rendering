@@ -1,20 +1,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import {
-  ArrowLeft,
-  CheckCircle2,
-  Code2,
-  Lightbulb,
-  Sparkles,
-  Info,
-  ChevronRight,
-  MonitorPlay
-} from "lucide-react";
+import {ArrowLeft,CheckCircle2,Code2,Lightbulb,Sparkles,Info,ChevronRight,MonitorPlay} from "lucide-react";
 import CodeBlock from "../components/CodeBlock";
-import {
-  LoginLogoutDemo,
-  PasswordToggleDemo,
-  LoadingDataDemo
-} from "../components/InteractiveDemos";
+import {LoginLogoutDemo,PasswordToggleDemo,LoadingDataDemo} from "../components/InteractiveDemos";
 import { examplesData } from "../data/examples";
 
 export default function ExampleDetails() {

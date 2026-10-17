@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  BookOpen,
   ArrowRight,
   Lightbulb
 } from "lucide-react";
@@ -42,17 +41,13 @@ export default function Learn() {
   return (
     <div className="flex-1 flex flex-col">
       {/* Page Header */}
-      <section className="bg-gradient-to-b from-indigo-50/70 to-white py-12 sm:py-16 border-b border-slate-200/80 text-left">
+      <section className="bg-gradient-to-b from-indigo-50/70 to-white py-12 sm:py-16 text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-semibold uppercase tracking-wider">
-              <BookOpen size={14} />
-              <span>Comprehensive Guide</span>
-            </div>
+          <div className="max-w-3xl mx-auto space-y-4">
             <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
               Learning Conditional Rendering
             </h1>
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
               Master the concepts, logic flow, and coding patterns behind conditional rendering in modern React.js.
             </p>
           </div>
@@ -69,12 +64,10 @@ export default function Learn() {
       <LearningCards />
 
       {/* 4. Interactive "Which Method Should I Use?" Guide */}
-      <section className="py-14 sm:py-20 bg-slate-50 border-t border-slate-200/80">
+      <section id="decision-helper" className="py-14 sm:py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-xs font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-200 inline-block mb-3">
-              Decision Helper
-            </span>
+  
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
               Which Method Should You Choose?
             </h2>
@@ -161,7 +154,7 @@ export default function Learn() {
       </section>
 
       {/* 5. Call to Action to Examples */}
-      <section className="py-12 bg-white border-t border-slate-200">
+      <section className="py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-4">
           <h3 className="text-2xl font-bold text-slate-900">
             Ready to see full interactive applications?

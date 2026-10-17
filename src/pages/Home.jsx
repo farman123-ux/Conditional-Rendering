@@ -11,13 +11,10 @@ export default function Home() {
       <Hero />
 
       {/* 2. Explore Practical Examples Section */}
-      <section id="examples-section" className="py-14 sm:py-20 bg-slate-50 border-t border-slate-200/80">
+      <section id="examples-section" className="py-5 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4 text-left">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-5 gap-4 text-left">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-200 inline-block mb-3">
-                Hands-On Practice
-              </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                 Explore Practical Examples
               </h2>

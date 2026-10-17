@@ -1,19 +1,7 @@
 import { useState } from "react";
-import {
-  UserCheck,
-  UserX,
-  Eye,
-  EyeOff,
-  Loader2,
-  RefreshCw,
-  Sparkles,
-  ShieldCheck,
-  KeyRound
-} from "lucide-react";
+import {UserCheck,UserX,Eye,EyeOff,Loader2,RefreshCw,Sparkles,KeyRound} from "lucide-react";
 
-/**
- * 1. Login & Logout Interactive Demo
- */
+
 export function LoginLogoutDemo({ compact = false }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -43,7 +31,7 @@ export function LoginLogoutDemo({ compact = false }) {
             </div>
             <div className="text-left">
               <h4 className="text-sm sm:text-base font-bold text-slate-900">
-                Welcome back, Alex! 👋
+                Welcome back, Farman Khan
               </h4>
               <p className="text-xs text-slate-500">
                 alex.dev@reactlearn.com • Member ID: #4092
@@ -53,7 +41,7 @@ export function LoginLogoutDemo({ compact = false }) {
 
           {!compact && (
             <div className="bg-emerald-50/50 p-2.5 rounded-lg border border-emerald-100 text-xs text-emerald-800 text-left">
-              🎉 <strong>Private Dashboard unlocked:</strong> You can now view your lessons, certificates, and interactive code snippets.
+            <strong>Private Dashboard unlocked:</strong> You can now view your lessons, certificates, and interactive code snippets.
             </div>
           )}
 
@@ -76,7 +64,7 @@ export function LoginLogoutDemo({ compact = false }) {
             </div>
             <div className="text-left">
               <h4 className="text-sm sm:text-base font-bold text-slate-800">
-                Please Log In 🔒
+                Please Log In 
               </h4>
               <p className="text-xs text-slate-500">
                 You are currently browsing as a guest learner.
@@ -109,16 +97,13 @@ export function LoginLogoutDemo({ compact = false }) {
 /**
  * 2. Show & Hide Password Interactive Demo
  */
-export function PasswordToggleDemo({ compact = false }) {
+export function PasswordToggleDemo({ _compact = false } = {}) {
   const [password, setPassword] = useState("ReactRules2026!");
   const [showPassword, setShowPassword] = useState(false);
 
   return (
     <div className="w-full bg-slate-50/80 rounded-xl p-4 sm:p-5 border border-slate-200">
       <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-200/80">
-        <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
-          Live Interactive Demo
-        </span>
         <span
           className={`text-xs px-2 py-0.5 rounded-full font-mono font-medium ${
             showPassword
@@ -171,18 +156,6 @@ export function PasswordToggleDemo({ compact = false }) {
             </button>
           </div>
         </div>
-
-        {!compact && (
-          <div className="flex items-center justify-between text-xs text-slate-500 pt-1">
-            <span className="flex items-center gap-1">
-              <ShieldCheck size={14} className="text-emerald-600" />
-              State toggles between masked and visible
-            </span>
-            <span className="font-mono text-[11px] text-slate-400">
-              Length: {password.length} chars
-            </span>
-          </div>
-        )}
       </div>
     </div>
   );

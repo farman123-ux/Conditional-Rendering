@@ -1,13 +1,5 @@
 import { useState } from "react";
-import {
-  Lightbulb,
-  Check,
-  Code,
-  Laptop,
-  ToggleLeft,
-  ToggleRight,
-  Info
-} from "lucide-react";
+import { Lightbulb, Check, Code, Laptop, ToggleLeft, ToggleRight, Info } from "lucide-react";
 import CodeBlock from "./CodeBlock";
 
 export default function Definition() {
@@ -26,14 +18,10 @@ export default function Definition() {
 export default App;`;
 
   return (
-    <section id="definition" className="py-14 sm:py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="definition" className="py-5 bg-white">
+      <div className="max-w-7xl mx-auto flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-12 text-left">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-semibold uppercase tracking-wider mb-3">
-            <Lightbulb size={14} />
-            <span>Core Foundation</span>
-          </div>
+        <div className="max-w-3xl mb-5 flex flex-col justify-center items-center">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             What Is Conditional Rendering?
           </h2>
@@ -106,9 +94,6 @@ export default App;`;
         <div className="bg-slate-50 rounded-2xl border border-slate-200/90 p-6 sm:p-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between pb-4 border-b border-slate-200 gap-4">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-indigo-600">
-                Code Walkthrough
-              </span>
               <h3 className="text-xl font-bold text-slate-900">
                 Simple Example: Login Greeting
               </h3>
@@ -116,7 +101,6 @@ export default App;`;
 
             {/* Interactive Toggle Button */}
             <div className="flex items-center gap-3 bg-white px-3.5 py-1.5 rounded-xl border border-slate-200 shadow-2xs">
-              <span className="text-xs text-slate-600 font-medium">Test Condition:</span>
               <button
                 onClick={() => setIsLoggedIn(!isLoggedIn)}
                 type="button"
@@ -141,9 +125,6 @@ export default App;`;
             {/* Right: Live Interactive Output Box */}
             <div className="lg:col-span-5 space-y-4">
               <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-xs text-left">
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-2">
-                  Live Component Output
-                </span>
                 <div
                   className={`p-6 rounded-xl border transition-all duration-200 text-center ${
                     isLoggedIn

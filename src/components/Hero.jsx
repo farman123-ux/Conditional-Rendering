@@ -1,20 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  ArrowRight,
-  BookOpen,
-  Sparkles,
-  CheckCircle,
-  XCircle,
-  ToggleLeft,
-  ToggleRight
-} from "lucide-react";
+import { ArrowRight, BookOpen, Sparkles, CheckCircle, XCircle, ToggleLeft, ToggleRight } from "lucide-react";
 
 export default function Hero() {
   const [demoCondition, setDemoCondition] = useState(true);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-indigo-50/70 via-white to-slate-50 pt-12 pb-16 lg:pt-20 lg:pb-24 border-b border-slate-200/60">
+    <section className="relative overflow-hidden bg-gradient-to-b from-indigo-50/70 via-white to-slate-50 pt-2 pb-5">
       {/* Subtle decorative background circles */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none overflow-hidden">
         <div className="absolute -top-24 -left-20 w-96 h-96 bg-indigo-200/30 rounded-full blur-3xl" />
@@ -22,12 +14,7 @@ export default function Hero() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto space-y-6">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-200/70 text-indigo-700 text-xs sm:text-sm font-medium shadow-xs">
-            <Sparkles size={15} className="text-indigo-600" />
-            <span>Interactive Beginner's Guide for React.js</span>
-          </div>
+        <div className="text-center max-w-3xl mx-auto space-y-2">
 
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
@@ -90,7 +77,7 @@ export default function Hero() {
 
         {/* Visual Representation of Conditional Logic */}
         <div className="mt-12 sm:mt-16 max-w-3xl mx-auto bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80">
-          <div className="flex flex-col sm:flex-row items-center justify-between pb-4 border-b border-slate-100 gap-3">
+          <div className="flex flex-col sm:flex-row items-center justify-between pb-4 gap-3">
             <div className="text-left">
               <span className="text-xs font-semibold uppercase tracking-wider text-indigo-600">
                 Visual Logic Diagram
@@ -170,7 +157,7 @@ export default function Hero() {
                     : "bg-slate-800 text-slate-100 border-slate-900"
                 }`}
               >
-                {demoCondition ? "👋 <WelcomeDashboard />" : "🔒 <LoginPrompt />"}
+                {demoCondition ? " <WelcomeDashboard />" : " <LoginPrompt />"}
               </div>
             </div>
           </div>

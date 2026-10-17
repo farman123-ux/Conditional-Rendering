@@ -25,13 +25,11 @@ export default function Workflow() {
   };
 
   return (
-    <section id="how-it-works" className="py-14 sm:py-20 bg-slate-50 border-y border-slate-200/80">
+    <section id="how-it-works" className="py-14 sm:py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-xs font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-200 inline-block mb-3">
-            Execution Flow
-          </span>
+          
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             How Conditional Rendering Works
           </h2>

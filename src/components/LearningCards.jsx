@@ -1,15 +1,5 @@
 import { useState } from "react";
-import {
-  Split,
-  Binary,
-  CheckCircle2,
-  ToggleLeft,
-  ChevronDown,
-  ChevronUp,
-  Sparkles,
-  Play,
-  RotateCcw
-} from "lucide-react";
+import { Split, Binary, CheckCircle2, ToggleLeft, ChevronDown, ChevronUp, Sparkles, Play, RotateCcw } from "lucide-react";
 import CodeBlock from "./CodeBlock";
 import { methodsData } from "../data/learningData";
 
@@ -26,29 +16,13 @@ export default function LearningCards() {
     setExpandedId(expandedId === id ? null : id);
   };
 
-  const getMethodIcon = (iconName) => {
-    switch (iconName) {
-      case "Split":
-        return <Split size={20} className="text-blue-600" />;
-      case "Binary":
-        return <Binary size={20} className="text-indigo-600" />;
-      case "CheckCircle2":
-        return <CheckCircle2 size={20} className="text-emerald-600" />;
-      case "ToggleLeft":
-        return <ToggleLeft size={20} className="text-amber-600" />;
-      default:
-        return <Sparkles size={20} className="text-indigo-600" />;
-    }
-  };
+ 
 
   return (
     <section id="methods" className="py-14 sm:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-xs font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-200 inline-block mb-3">
-            Core Techniques
-          </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             4 Conditional Rendering Methods
           </h2>
@@ -72,13 +46,11 @@ export default function LearningCards() {
                 <div className="p-6 sm:p-7 text-left">
                   <div className="flex items-start justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-11 h-11 rounded-xl bg-slate-100 flex items-center justify-center">
-                        {getMethodIcon(item.iconName)}
-                      </div>
+                      
                       <div>
-                        <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">
-                          {item.tag}
-                        </span>
+                          <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">
+                            {item.tag}
+                          </span>
                         <h3 className="text-xl font-bold text-slate-900 leading-tight">
                           {item.title}
                         </h3>
@@ -239,7 +211,7 @@ export default function LearningCards() {
                           <div className="p-3.5 rounded-lg bg-slate-50 border border-slate-200 text-center min-h-[46px] flex items-center justify-center">
                             {demoState3 ? (
                               <p className="text-sm font-semibold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-md border border-emerald-200">
-                                🔔 You have a new message!
+                                 You have a new message!
                               </p>
                             ) : (
                               <p className="text-xs text-slate-400 italic">
@@ -269,7 +241,7 @@ export default function LearningCards() {
                           <div className="p-3.5 rounded-lg bg-slate-50 border border-slate-200 text-center min-h-[46px] flex items-center justify-center">
                             {demoState4 ? (
                               <p className="text-sm font-semibold text-amber-800 bg-amber-50 px-3 py-1 rounded-md border border-amber-200">
-                                ✨ Hello! This message is visible.
+                                 Hello! This message is visible.
                               </p>
                             ) : (
                               <p className="text-xs text-slate-400 italic">

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Sparkles, Search, Filter, Layers } from "lucide-react";
+import { Search, Filter, Layers } from "lucide-react";
 import ExampleCard from "../components/ExampleCard";
 import { examplesData } from "../data/examples";
 
@@ -20,13 +20,9 @@ export default function Examples() {
   return (
     <div className="flex-1 flex flex-col bg-slate-50">
       {/* Page Header */}
-      <section className="bg-gradient-to-b from-indigo-50/70 to-white py-12 sm:py-16 border-b border-slate-200/80 text-left">
+      <section className="bg-gradient-to-b from-indigo-50/70 to-white py-12 sm:py-16 text-left">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-semibold uppercase tracking-wider">
-              <Sparkles size={14} />
-              <span>Interactive Demos</span>
-            </div>
             <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
               Practical React Examples
             </h1>
@@ -36,7 +32,7 @@ export default function Examples() {
           </div>
 
           {/* Search & Filter Bar */}
-          <div className="mt-8 pt-6 border-t border-slate-200/80 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+          <div className="mt-8 pt-6 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
             {/* Filter Pills */}
             <div className="flex items-center gap-2">
               <span className="text-xs font-semibold text-slate-500 mr-1 flex items-center gap-1">

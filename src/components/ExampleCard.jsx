@@ -1,16 +1,6 @@
 import { Link } from "react-router-dom";
-import {
-  UserCheck,
-  Eye,
-  Loader2,
-  ArrowRight,
-  Sparkles
-} from "lucide-react";
-import {
-  LoginLogoutDemo,
-  PasswordToggleDemo,
-  LoadingDataDemo
-} from "./InteractiveDemos";
+import { UserCheck, Eye, Loader2, ArrowRight, Sparkles } from "lucide-react";
+import { LoginLogoutDemo, PasswordToggleDemo, LoadingDataDemo } from "./InteractiveDemos";
 
 export default function ExampleCard({ example }) {
   const getIcon = (iconName) => {
@@ -75,9 +65,6 @@ export default function ExampleCard({ example }) {
 
       {/* Bottom Action Footer */}
       <div className="px-6 py-4 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between">
-        <span className="text-xs text-slate-500 font-medium">
-          Full code & walkthrough available
-        </span>
 
         <Link
           to={`/examples/${example.id}`}

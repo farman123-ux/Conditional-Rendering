@@ -17,7 +17,7 @@ export default function CodeBlock({ code, language = "jsx", title }) {
     }
   };
 
-  // const lines = code.trim().split("\n");
+  const lines = (code || "").trim().split("\n");
 
   return (
     <div className="rounded-xl overflow-hidden border border-slate-700/80 bg-slate-900 shadow-md my-4 text-left font-mono text-sm">
