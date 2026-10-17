@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  ArrowRight,
-  Lightbulb
-} from "lucide-react";
+import {ArrowRight,Lightbulb} from "lucide-react";
 import Definition from "../components/Definition";
 import Workflow from "../components/Workflow";
 import LearningCards from "../components/LearningCards";
@@ -41,13 +38,13 @@ export default function Learn() {
   return (
     <div className="flex-1 flex flex-col">
       {/* Page Header */}
-      <section className="bg-gradient-to-b from-indigo-50/70 to-white py-12 sm:py-16 text-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto space-y-4">
+      <section className="bg-gradient-to-b flex  flex-col justify-center items-center from-indigo-50/70 to-white py-12 sm:py-16 text-left">
+        <div className="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8">
+          <div className=" ">
             <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
               Learning Conditional Rendering
             </h1>
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
               Master the concepts, logic flow, and coding patterns behind conditional rendering in modern React.js.
             </p>
           </div>
@@ -67,7 +64,7 @@ export default function Learn() {
       <section id="decision-helper" className="py-14 sm:py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-  
+
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
               Which Method Should You Choose?
             </h2>
@@ -82,44 +79,40 @@ export default function Learn() {
               <button
                 onClick={() => setSelectedScenario("binary")}
                 type="button"
-                className={`p-3 rounded-xl text-xs sm:text-sm font-semibold transition-all text-center ${
-                  selectedScenario === "binary"
+                className={`p-3 rounded-xl text-xs sm:text-sm font-semibold transition-all text-center ${selectedScenario === "binary"
                     ? "bg-indigo-600 text-white shadow-xs"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                }`}
+                  }`}
               >
                 Either / Or Choice
               </button>
               <button
                 onClick={() => setSelectedScenario("optional")}
                 type="button"
-                className={`p-3 rounded-xl text-xs sm:text-sm font-semibold transition-all text-center ${
-                  selectedScenario === "optional"
+                className={`p-3 rounded-xl text-xs sm:text-sm font-semibold transition-all text-center ${selectedScenario === "optional"
                     ? "bg-indigo-600 text-white shadow-xs"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                }`}
+                  }`}
               >
                 Show or Nothing
               </button>
               <button
                 onClick={() => setSelectedScenario("earlyReturn")}
                 type="button"
-                className={`p-3 rounded-xl text-xs sm:text-sm font-semibold transition-all text-center ${
-                  selectedScenario === "earlyReturn"
+                className={`p-3 rounded-xl text-xs sm:text-sm font-semibold transition-all text-center ${selectedScenario === "earlyReturn"
                     ? "bg-indigo-600 text-white shadow-xs"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                }`}
+                  }`}
               >
                 Early Return / Error
               </button>
               <button
                 onClick={() => setSelectedScenario("interactive")}
                 type="button"
-                className={`p-3 rounded-xl text-xs sm:text-sm font-semibold transition-all text-center ${
-                  selectedScenario === "interactive"
+                className={`p-3 rounded-xl text-xs sm:text-sm font-semibold transition-all text-center ${selectedScenario === "interactive"
                     ? "bg-indigo-600 text-white shadow-xs"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                }`}
+                  }`}
               >
                 User Click / Toggle
               </button>
