@@ -25,7 +25,7 @@ export default function Home() {
 
             <Link
               to="/examples"
-              className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-white hover:bg-slate-50 text-indigo-600 font-semibold text-sm border border-slate-200 shadow-2xs hover:border-indigo-300 transition-all shrink-0"
+              className="inline-flex items-center gap-1.5 px-5 py-2.5  rounded-xl bg-white hover:bg-slate-50 text-indigo-600 font-semibold text-sm border border-slate-200 shadow-2xs hover:border-indigo-300 transition-all shrink-0"
             >
               <span>View All 3 Examples</span>
               <ArrowRight size={16} />
@@ -33,7 +33,7 @@ export default function Home() {
           </div>
 
           {/* Exactly 3 large attractive cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
             {examplesData.map((example) => (
               <ExampleCard key={example.id} example={example} />
             ))}

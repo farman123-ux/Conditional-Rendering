@@ -33,13 +33,9 @@ export default function About() {
   return (
     <div className="flex-1 flex flex-col bg-slate-50 text-left">
       {/* Header Banner */}
-      <section className="bg-gradient-to-b from-indigo-50/70 to-white py-12 sm:py-16">
+      <section className="bg-gradient-to-b from-indigo-50/70 to-white pt-8 pb-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-semibold uppercase tracking-wider">
-              <Sparkles size={14} />
-              <span>About React Learn</span>
-            </div>
             <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
               Empowering Developers to Understand Conditional Rendering
             </h1>

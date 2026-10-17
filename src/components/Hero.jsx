@@ -6,7 +6,7 @@ export default function Hero() {
   const [demoCondition, setDemoCondition] = useState(true);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-indigo-50/70 via-white to-slate-50 pt-2 pb-5">
+    <section className="relative overflow-hidden bg-gradient-to-b from-indigo-50/70 via-white to-slate-50 pt-10 pb-5">
       {/* Subtle decorative background circles */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none overflow-hidden">
         <div className="absolute -top-24 -left-20 w-96 h-96 bg-indigo-200/30 rounded-full blur-3xl" />
