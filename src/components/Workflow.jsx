@@ -27,9 +27,7 @@ export default function Workflow() {
   return (
     <section id="how-it-works" className="py-14 sm:py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             How Conditional Rendering Works
           </h2>
@@ -38,7 +36,6 @@ export default function Workflow() {
           </p>
         </div>
 
-        {/* Visual Flow Diagram Banner */}
         <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-xs mb-12">
           <div className="text-center mb-6">
             <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">
@@ -50,7 +47,6 @@ export default function Workflow() {
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 max-w-4xl mx-auto">
-            {/* Box 1 */}
             <div className="flex-1 w-full bg-indigo-50/70 border border-indigo-200 rounded-xl p-5 text-center">
               <span className="text-xs font-mono font-bold text-indigo-600 block mb-1">
                 STEP A
@@ -63,7 +59,6 @@ export default function Workflow() {
 
             <ArrowRight size={24} className="text-slate-400 rotate-90 md:rotate-0 shrink-0" />
 
-            {/* Box 2 */}
             <div className="flex-1 w-full bg-purple-50/70 border border-purple-200 rounded-xl p-5 text-center">
               <span className="text-xs font-mono font-bold text-purple-600 block mb-1">
                 STEP B
@@ -76,7 +71,6 @@ export default function Workflow() {
 
             <ArrowRight size={24} className="text-slate-400 rotate-90 md:rotate-0 shrink-0" />
 
-            {/* Box 3 */}
             <div className="flex-1 w-full bg-emerald-50/70 border border-emerald-200 rounded-xl p-5 text-center">
               <span className="text-xs font-mono font-bold text-emerald-600 block mb-1">
                 STEP C
@@ -89,7 +83,6 @@ export default function Workflow() {
           </div>
         </div>
 
-        {/* 4 Step Process Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
           {workflowSteps.map((item) => (
             <div

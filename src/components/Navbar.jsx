@@ -21,7 +21,6 @@ export default function Navbar() {
   const searchContainerRef = useRef(null);
   const navigate = useNavigate();
 
-  // Multi-term query filter
   const filteredResults = searchQuery.trim() === ""
     ? []
     : searchIndex.filter((item) => {
@@ -33,7 +32,6 @@ export default function Navbar() {
         );
       });
 
-  // Close search dropdown on click outside
   useEffect(() => {
     function handleClickOutside(event) {
       if (
@@ -56,7 +54,6 @@ export default function Navbar() {
       const [targetPath, hash] = path.split("#");
       const currentPath = window.location.pathname;
 
-      // If we are already on the target page, scroll directly
       if (currentPath === (targetPath || "/")) {
         const element = document.getElementById(hash);
         if (element) {
@@ -110,7 +107,6 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md shadow-xs transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Left: Brand Identity */}
           <Link
             to="/"
             className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500/50 rounded-lg p-1 shrink-0"
@@ -128,7 +124,6 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Center: Navigation Links (Desktop) */}
           <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
             <NavLink to="/" end className={navLinkClasses}>
               Home
@@ -144,9 +139,7 @@ export default function Navbar() {
             </NavLink>
           </div>
 
-          {/* Right: Search & Mobile Menu Button */}
           <div className="flex items-center gap-2 sm:gap-3">
-            {/* Search Input Container */}
             <div className="relative" ref={searchContainerRef}>
               <div className="relative flex items-center">
                 <Search
@@ -180,7 +173,6 @@ export default function Navbar() {
                 )}
               </div>
 
-              {/* Live Search Results Dropdown */}
               {isSearchOpen && searchQuery.trim() !== "" && (
                 <div className="absolute right-0 mt-2 w-80 sm:w-96 max-h-96 overflow-y-auto bg-white rounded-2xl shadow-2xl border border-slate-200 py-2 z-[60] text-left ring-1 ring-black/5">
                   <div className="px-3 py-1.5 text-[11px] font-semibold text-slate-400 uppercase tracking-wider border-b border-slate-100 flex items-center justify-between">
@@ -233,7 +225,6 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Mobile Hamburger Button */}
             <div className="md:hidden flex items-center">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -248,7 +239,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-slate-200 bg-white/95 px-4 pt-3 pb-4 space-y-2 shadow-lg text-left">
           <div className="relative mb-2">

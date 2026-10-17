@@ -6,7 +6,6 @@ export default function Footer() {
     <footer className="mt-auto bg-slate-900 text-slate-300 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Brand Info */}
           <div className="md:col-span-2 space-y-3">
             <Link to="/" className="inline-flex items-center gap-2.5 group">
               <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white">
@@ -27,7 +26,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-3">
               Quick Links
@@ -68,7 +66,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Technologies */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-3">
               Technologies
@@ -93,7 +90,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
           <p>© 2026 React Learn. Built for learners.</p>
           <div className="flex items-center gap-4">

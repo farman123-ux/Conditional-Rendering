@@ -32,7 +32,6 @@ export default function ExampleCard({ example }) {
   return (
     <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:border-slate-300 hover:shadow-md transition-all duration-200 flex flex-col justify-between overflow-hidden text-left group">
       <div className="p-6 sm:p-7">
-        {/* Top Header: Icon & Difficulty Label */}
         <div className="flex items-center justify-between gap-4 mb-4">
           <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center shrink-0">
             {getIcon(example.iconName)}
@@ -46,7 +45,6 @@ export default function ExampleCard({ example }) {
           </div>
         </div>
 
-        {/* Title & Description */}
         <span className="text-[11px] font-semibold uppercase tracking-wider text-indigo-600 font-mono">
           {example.method}
         </span>
@@ -57,15 +55,12 @@ export default function ExampleCard({ example }) {
           {example.description}
         </p>
 
-        {/* Working Interactive Demo inside the Card */}
         <div className="mb-2">
           {renderInteractiveWidget(example.id)}
         </div>
       </div>
 
-      {/* Bottom Action Footer */}
       <div className="px-6 py-4 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between">
-
         <Link
           to={`/examples/${example.id}`}
           className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs sm:text-sm font-semibold shadow-xs hover:shadow-sm transition-all duration-150 group/btn"

@@ -1,6 +1,5 @@
 import { useState } from "react";
-import {UserCheck,UserX,Eye,EyeOff,Loader2,RefreshCw,Sparkles,KeyRound} from "lucide-react";
-
+import { UserCheck, UserX, Eye, EyeOff, Loader2, RefreshCw, Sparkles, KeyRound } from "lucide-react";
 
 export function LoginLogoutDemo({ compact = false }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -22,7 +21,6 @@ export function LoginLogoutDemo({ compact = false }) {
         </span>
       </div>
 
-      {/* Conditional Rendering: Ternary Operator */}
       {isLoggedIn ? (
         <div className="bg-white rounded-xl p-4 border border-emerald-200 shadow-2xs space-y-3 animate-in fade-in">
           <div className="flex items-center gap-3">
@@ -41,7 +39,7 @@ export function LoginLogoutDemo({ compact = false }) {
 
           {!compact && (
             <div className="bg-emerald-50/50 p-2.5 rounded-lg border border-emerald-100 text-xs text-emerald-800 text-left">
-            <strong>Private Dashboard unlocked:</strong> You can now view your lessons, certificates, and interactive code snippets.
+              <strong>Private Dashboard unlocked:</strong> You can now view your lessons, certificates, and interactive code snippets.
             </div>
           )}
 
@@ -94,9 +92,6 @@ export function LoginLogoutDemo({ compact = false }) {
   );
 }
 
-/**
- * 2. Show & Hide Password Interactive Demo
- */
 export function PasswordToggleDemo({ _compact = false } = {}) {
   const [password, setPassword] = useState("ReactRules2026!");
   const [showPassword, setShowPassword] = useState(false);
@@ -125,7 +120,6 @@ export function PasswordToggleDemo({ _compact = false } = {}) {
             Secret Key / Password
           </label>
           <div className="relative flex items-center">
-            {/* Conditional input type */}
             <input
               id="password-field"
               type={showPassword ? "text" : "password"}
@@ -135,7 +129,6 @@ export function PasswordToggleDemo({ _compact = false } = {}) {
               placeholder="Enter password"
             />
 
-            {/* Toggle Button with Conditional Icons & Label */}
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
@@ -161,9 +154,6 @@ export function PasswordToggleDemo({ _compact = false } = {}) {
   );
 }
 
-/**
- * 3. Loading State & Data Display Interactive Demo
- */
 export function LoadingDataDemo({ compact = false }) {
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState(null);
@@ -172,14 +162,13 @@ export function LoadingDataDemo({ compact = false }) {
     setIsLoading(true);
     setData(null);
 
-    // Simulate 1.2s API network delay
     setTimeout(() => {
       setData({
-        name: "Sarah Chen",
-        role: "Senior Frontend Engineer",
+        name: "Farman Khan",
+        role: "Software Developer",
         skills: ["React", "JavaScript", "Tailwind CSS"],
         joinedYear: 2024,
-        avatarInitials: "SC"
+        avatarInitials: "FK"
       });
       setIsLoading(false);
     }, 1200);
@@ -209,7 +198,6 @@ export function LoadingDataDemo({ compact = false }) {
         </span>
       </div>
 
-      {/* State 1: If loading, show spinner */}
       {isLoading ? (
         <div className="bg-white rounded-xl p-6 border border-amber-200 shadow-2xs text-center space-y-3 min-h-[140px] flex flex-col items-center justify-center">
           <Loader2 size={28} className="text-amber-500 animate-spin" />
@@ -223,7 +211,6 @@ export function LoadingDataDemo({ compact = false }) {
           </div>
         </div>
       ) : data ? (
-        /* State 2: If data loaded, show user card */
         <div className="bg-white rounded-xl p-4 border border-purple-200 shadow-2xs space-y-3 text-left animate-in fade-in">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -267,12 +254,11 @@ export function LoadingDataDemo({ compact = false }) {
           </div>
           {!compact && (
             <p className="text-xs text-slate-500 pt-1 border-t border-slate-100">
-              💡 Asynchronous data loaded into state, triggering the success view.
+               Asynchronous data loaded into state, triggering the success view.
             </p>
           )}
         </div>
       ) : (
-        /* State 3: Fallback idle state */
         <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-2xs text-center space-y-3 min-h-[140px] flex flex-col items-center justify-center">
           <p className="text-xs text-slate-600">
             {compact

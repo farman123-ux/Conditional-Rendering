@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {ArrowRight,Lightbulb} from "lucide-react";
+import { ArrowRight, Lightbulb } from "lucide-react";
 import Definition from "../components/Definition";
 import Workflow from "../components/Workflow";
 import LearningCards from "../components/LearningCards";
@@ -37,34 +37,28 @@ export default function Learn() {
 
   return (
     <div className="flex-1 flex flex-col">
-      {/* Page Header */}
-      <section className="bg-gradient-to-b flex  flex-col justify-center items-center from-indigo-50/70 to-white py-12 sm:py-16 text-left">
-        <div className="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8">
-          <div className=" ">
+      <section className="bg-gradient-to-b from-indigo-50/70 to-white py-12 sm:py-16 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto space-y-4">
             <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
               Learning Conditional Rendering
             </h1>
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
               Master the concepts, logic flow, and coding patterns behind conditional rendering in modern React.js.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 1. Core Definition */}
       <Definition />
 
-      {/* 2. Step by Step Workflow */}
       <Workflow />
 
-      {/* 3. The 4 Methods */}
       <LearningCards />
 
-      {/* 4. Interactive "Which Method Should I Use?" Guide */}
       <section id="decision-helper" className="py-14 sm:py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
               Which Method Should You Choose?
             </h2>
@@ -74,51 +68,53 @@ export default function Learn() {
           </div>
 
           <div className="max-w-4xl mx-auto bg-white rounded-2xl border border-slate-200/90 p-6 sm:p-8 shadow-xs text-left">
-            {/* Scenario buttons */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
               <button
                 onClick={() => setSelectedScenario("binary")}
                 type="button"
-                className={`p-3 rounded-xl text-xs sm:text-sm font-semibold transition-all text-center ${selectedScenario === "binary"
+                className={`p-3 rounded-xl text-xs sm:text-sm font-semibold transition-all text-center ${
+                  selectedScenario === "binary"
                     ? "bg-indigo-600 text-white shadow-xs"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                  }`}
+                }`}
               >
                 Either / Or Choice
               </button>
               <button
                 onClick={() => setSelectedScenario("optional")}
                 type="button"
-                className={`p-3 rounded-xl text-xs sm:text-sm font-semibold transition-all text-center ${selectedScenario === "optional"
+                className={`p-3 rounded-xl text-xs sm:text-sm font-semibold transition-all text-center ${
+                  selectedScenario === "optional"
                     ? "bg-indigo-600 text-white shadow-xs"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                  }`}
+                }`}
               >
                 Show or Nothing
               </button>
               <button
                 onClick={() => setSelectedScenario("earlyReturn")}
                 type="button"
-                className={`p-3 rounded-xl text-xs sm:text-sm font-semibold transition-all text-center ${selectedScenario === "earlyReturn"
+                className={`p-3 rounded-xl text-xs sm:text-sm font-semibold transition-all text-center ${
+                  selectedScenario === "earlyReturn"
                     ? "bg-indigo-600 text-white shadow-xs"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                  }`}
+                }`}
               >
                 Early Return / Error
               </button>
               <button
                 onClick={() => setSelectedScenario("interactive")}
                 type="button"
-                className={`p-3 rounded-xl text-xs sm:text-sm font-semibold transition-all text-center ${selectedScenario === "interactive"
+                className={`p-3 rounded-xl text-xs sm:text-sm font-semibold transition-all text-center ${
+                  selectedScenario === "interactive"
                     ? "bg-indigo-600 text-white shadow-xs"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                  }`}
+                }`}
               >
                 User Click / Toggle
               </button>
             </div>
 
-            {/* Recommendation Box */}
             <div className="bg-indigo-50/60 rounded-xl p-6 border border-indigo-200/80 space-y-4">
               <div className="flex items-center gap-2 text-indigo-700 font-semibold text-xs uppercase tracking-wider">
                 <Lightbulb size={16} />
@@ -146,7 +142,6 @@ export default function Learn() {
         </div>
       </section>
 
-      {/* 5. Call to Action to Examples */}
       <section className="py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-4">
           <h3 className="text-2xl font-bold text-slate-900">

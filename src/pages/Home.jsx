@@ -7,10 +7,8 @@ import { examplesData } from "../data/examples";
 export default function Home() {
   return (
     <div className="flex-1 flex flex-col">
-      {/* 1. Hero Section */}
       <Hero />
 
-      {/* 2. Explore Practical Examples Section */}
       <section id="examples-section" className="py-5 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-5 gap-4 text-left">
@@ -25,14 +23,13 @@ export default function Home() {
 
             <Link
               to="/examples"
-              className="inline-flex items-center gap-1.5 px-5 py-2.5  rounded-xl bg-white hover:bg-slate-50 text-indigo-600 font-semibold text-sm border border-slate-200 shadow-2xs hover:border-indigo-300 transition-all shrink-0"
+              className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-white hover:bg-slate-50 text-indigo-600 font-semibold text-sm border border-slate-200 shadow-2xs hover:border-indigo-300 transition-all shrink-0"
             >
               <span>View All 3 Examples</span>
               <ArrowRight size={16} />
             </Link>
           </div>
 
-          {/* Exactly 3 large attractive cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
             {examplesData.map((example) => (
               <ExampleCard key={example.id} example={example} />

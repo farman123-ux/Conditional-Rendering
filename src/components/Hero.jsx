@@ -7,7 +7,6 @@ export default function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-indigo-50/70 via-white to-slate-50 pt-10 pb-5">
-      {/* Subtle decorative background circles */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none overflow-hidden">
         <div className="absolute -top-24 -left-20 w-96 h-96 bg-indigo-200/30 rounded-full blur-3xl" />
         <div className="absolute top-1/3 -right-20 w-96 h-96 bg-sky-200/30 rounded-full blur-3xl" />
@@ -15,8 +14,6 @@ export default function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto space-y-2">
-
-          {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
             Master{" "}
             <span className="bg-gradient-to-r from-indigo-600 via-indigo-700 to-sky-600 bg-clip-text text-transparent">
@@ -25,14 +22,12 @@ export default function Hero() {
             in React
           </h1>
 
-          {/* Description */}
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
             Learn how to display different UI elements based on conditions in React.
             Understand the logic, explore simple examples, and see how conditional
             rendering works in real applications.
           </p>
 
-          {/* Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
             <Link
               to="/learn"
@@ -55,7 +50,6 @@ export default function Hero() {
             </Link>
           </div>
 
-          {/* Technology Badges */}
           <div className="pt-4 flex flex-wrap items-center justify-center gap-2 text-xs text-slate-600">
             <span className="px-2.5 py-1 rounded-md bg-white border border-slate-200 shadow-2xs font-mono font-medium text-slate-700">
               React.js
@@ -75,7 +69,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Visual Representation of Conditional Logic */}
         <div className="mt-12 sm:mt-16 max-w-3xl mx-auto bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200/80">
           <div className="flex flex-col sm:flex-row items-center justify-between pb-4 gap-3">
             <div className="text-left">
@@ -87,7 +80,6 @@ export default function Hero() {
               </h2>
             </div>
 
-            {/* Interactive Toggle for the Visual Diagram */}
             <button
               onClick={() => setDemoCondition(!demoCondition)}
               type="button"
@@ -107,9 +99,7 @@ export default function Hero() {
             </button>
           </div>
 
-          {/* Diagram Flow */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center pt-6 text-center">
-            {/* Step 1: Condition */}
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/70 flex flex-col items-center">
               <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1">
                 1. Condition
@@ -119,7 +109,6 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Step 2: Evaluation */}
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/70 flex flex-col items-center">
               <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1">
                 2. Evaluation
@@ -145,7 +134,6 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Step 3: UI Output */}
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/70 flex flex-col items-center">
               <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-1">
                 3. UI Output

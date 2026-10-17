@@ -1,10 +1,5 @@
 import { Link } from "react-router-dom";
-import {
-  Code2,
-  CheckCircle2,
-  Sparkles,
-  Terminal
-} from "lucide-react";
+import { Code2, CheckCircle2, Terminal } from "lucide-react";
 
 export default function About() {
   const principles = [
@@ -32,7 +27,6 @@ export default function About() {
 
   return (
     <div className="flex-1 flex flex-col bg-slate-50 text-left">
-      {/* Header Banner */}
       <section className="bg-gradient-to-b from-indigo-50/70 to-white pt-8 pb-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
@@ -46,9 +40,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 space-y-12">
-        {/* Mission Statement */}
         <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-xs">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center">
@@ -67,7 +59,6 @@ export default function About() {
           </p>
         </div>
 
-        {/* Educational Principles */}
         <div>
           <h2 className="text-2xl font-bold text-slate-900 mb-6">
             Our Learning Principles
@@ -94,7 +85,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Tech Stack Summary */}
         <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-xs">
           <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
             <Terminal size={20} className="text-indigo-600" />
@@ -131,7 +121,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Bottom CTA */}
         <div className="bg-gradient-to-r from-indigo-600 to-sky-600 rounded-2xl p-8 sm:p-10 text-white text-center space-y-4 shadow-md">
           <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
             Start Learning Conditional Rendering Today

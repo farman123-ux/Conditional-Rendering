@@ -11,7 +11,6 @@ export default function CodeBlock({ code, language = "jsx", title }) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
-      // Fallback
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     }
@@ -21,7 +20,6 @@ export default function CodeBlock({ code, language = "jsx", title }) {
 
   return (
     <div className="rounded-xl overflow-hidden border border-slate-700/80 bg-slate-900 shadow-md my-4 text-left font-mono text-sm">
-      {/* Code Header Bar */}
       <div className="flex items-center justify-between px-4 py-2.5 bg-slate-800/90 border-b border-slate-700/80 text-xs text-slate-300">
         <div className="flex items-center space-x-2">
           <div className="flex space-x-1.5">
@@ -55,7 +53,6 @@ export default function CodeBlock({ code, language = "jsx", title }) {
         </button>
       </div>
 
-      {/* Code Content with Line Numbers */}
       <div className="overflow-x-auto p-4 leading-relaxed text-slate-200">
         <table className="w-full border-collapse">
           <tbody>
@@ -76,13 +73,11 @@ export default function CodeBlock({ code, language = "jsx", title }) {
   );
 }
 
-// Lightweight syntax highlight formatter
 function colorizeLine(line) {
   if (line.trim().startsWith("//") || line.trim().startsWith("/*") || line.trim().startsWith("*")) {
     return <span className="text-emerald-400/90 italic">{line}</span>;
   }
 
-  // Highlight keywords
   const parts = line.split(/(\b(?:import|export|default|function|const|let|var|return|if|else|from|true|false|null|undefined)\b|[{}()[\]<>?:;,.=])/g);
 
   return parts.map((part, i) => {

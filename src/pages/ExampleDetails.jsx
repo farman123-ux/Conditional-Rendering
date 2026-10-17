@@ -1,19 +1,17 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import {ArrowLeft,CheckCircle2,Code2,Lightbulb,Sparkles,Info,ChevronRight,MonitorPlay} from "lucide-react";
+import { ArrowLeft, CheckCircle2, Code2, Lightbulb, Sparkles, Info, ChevronRight, MonitorPlay } from "lucide-react";
 import CodeBlock from "../components/CodeBlock";
-import {LoginLogoutDemo,PasswordToggleDemo,LoadingDataDemo} from "../components/InteractiveDemos";
+import { LoginLogoutDemo, PasswordToggleDemo, LoadingDataDemo } from "../components/InteractiveDemos";
 import { examplesData } from "../data/examples";
 
 export default function ExampleDetails() {
   const { id } = useParams();
   const example = examplesData.find((item) => item.id === id);
 
-  // If no match found, fallback to examples list
   if (!example) {
     return <Navigate to="/examples" replace />;
   }
 
-  // Render the matching live sandbox demo
   const renderInteractiveDemo = () => {
     switch (example.id) {
       case "login-logout":
@@ -30,7 +28,6 @@ export default function ExampleDetails() {
   return (
     <div className="flex-1 flex flex-col bg-slate-50 py-10 sm:py-14 text-left">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        {/* Navigation Breadcrumbs & Back Button */}
         <div className="flex items-center justify-between gap-4 mb-8">
           <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
             <Link to="/" className="hover:text-indigo-600 transition-colors">
@@ -55,7 +52,6 @@ export default function ExampleDetails() {
           </Link>
         </div>
 
-        {/* Title Header Block */}
         <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-xs mb-8">
           <div className="flex flex-wrap items-center gap-2.5 mb-3">
             <span
@@ -81,9 +77,7 @@ export default function ExampleDetails() {
           </div>
         </div>
 
-        {/* Two-Column Grid: Interactive Demo & What You Will Learn */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-8 items-start">
-          {/* Left: Working Interactive Demo */}
           <div className="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-xs space-y-4">
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
               <div className="flex items-center gap-2">
@@ -104,7 +98,6 @@ export default function ExampleDetails() {
             {renderInteractiveDemo()}
           </div>
 
-          {/* Right: What You Will Learn */}
           <div className="lg:col-span-5 bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-xs space-y-4">
             <div className="flex items-center gap-2 pb-3 border-b border-slate-100">
               <Sparkles size={18} className="text-amber-500" />
@@ -127,7 +120,6 @@ export default function ExampleDetails() {
           </div>
         </div>
 
-        {/* Expected Output Cards */}
         <div className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-xs mb-8 space-y-4">
           <div className="flex items-center gap-2 pb-3 border-b border-slate-100">
             <Info size={18} className="text-indigo-600" />
@@ -157,7 +149,6 @@ export default function ExampleDetails() {
           </div>
         </div>
 
-        {/* Complete React Code Block */}
         <div className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-xs mb-8 space-y-4">
           <div className="flex items-center justify-between pb-3 border-b border-slate-100">
             <div className="flex items-center gap-2">
@@ -178,7 +169,6 @@ export default function ExampleDetails() {
           <CodeBlock code={example.code} title={`${example.id}.jsx`} />
         </div>
 
-        {/* Line-by-Line Code Explanation */}
         <div className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-xs mb-8 space-y-4">
           <div className="flex items-center gap-2 pb-3 border-b border-slate-100">
             <Lightbulb size={18} className="text-indigo-600" />
@@ -201,7 +191,6 @@ export default function ExampleDetails() {
           </div>
         </div>
 
-        {/* Footer Navigation Back Button */}
         <div className="pt-4 flex justify-center">
           <Link
             to="/examples"

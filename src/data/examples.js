@@ -28,7 +28,7 @@ function AuthStatus() {
       {/* 2. Ternary operator checks condition: condition ? <IfTrue /> : <IfFalse /> */}
       {isLoggedIn ? (
         <div className="card logged-in">
-          <h2>Welcome back, Alex! 👋</h2>
+          <h2>Welcome back, Farman</h2>
           <p>You have access to your personal developer dashboard.</p>
           <button onClick={() => setIsLoggedIn(false)}>
             Log Out
@@ -36,7 +36,7 @@ function AuthStatus() {
         </div>
       ) : (
         <div className="card logged-out">
-          <h2>Please Log In 🔒</h2>
+          <h2>Please Log In </h2>
           <p>Sign in to view your private projects and lessons.</p>
           <button onClick={() => setIsLoggedIn(true)}>
             Log In
@@ -73,8 +73,8 @@ export default AuthStatus;`,
     conditionExplanation:
       "The condition is 'isLoggedIn === true'. When true, Alex's dashboard greeting is displayed with a logout button. When false, the guest login prompt is displayed with a login button.",
     expectedOutput: {
-      whenTrue: "Displays: 'Welcome back, Alex! 👋' with a dashboard message and a 'Log Out' button.",
-      whenFalse: "Displays: 'Please Log In 🔒' with an informational notice and a 'Log In' button."
+      whenTrue: "Displays: 'Welcome back, Farman' with a dashboard message and a 'Log Out' button.",
+      whenFalse: "Displays: 'Please Log In ' with an informational notice and a 'Log In' button."
     }
   },
   {
@@ -192,7 +192,7 @@ function DataViewer() {
     // Simulate a 1.5 second API call
     setTimeout(() => {
       setData({
-        name: "Sarah Chen",
+        name: "Farman Khan",
         role: "Frontend Engineer",
         skills: ["React", "JavaScript", "Tailwind CSS"],
         joinedYear: 2024

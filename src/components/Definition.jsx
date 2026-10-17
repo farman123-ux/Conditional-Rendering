@@ -20,7 +20,6 @@ export default App;`;
   return (
     <section id="definition" className="py-5 bg-white">
       <div className="max-w-7xl mx-auto flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="max-w-3xl mb-5 flex flex-col justify-center items-center">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             What Is Conditional Rendering?
@@ -30,9 +29,7 @@ export default App;`;
           </p>
         </div>
 
-        {/* 3 Explanation Cards: Definition, Simple Explanation, Real-life Example */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {/* Card 1: Definition */}
           <div className="bg-slate-50/80 rounded-2xl p-6 border border-slate-200/80 flex flex-col justify-between">
             <div>
               <div className="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center mb-4">
@@ -51,7 +48,6 @@ export default App;`;
             </div>
           </div>
 
-          {/* Card 2: Simple Explanation */}
           <div className="bg-slate-50/80 rounded-2xl p-6 border border-slate-200/80 flex flex-col justify-between">
             <div>
               <div className="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center mb-4">
@@ -70,7 +66,6 @@ export default App;`;
             </div>
           </div>
 
-          {/* Card 3: Real-life Example */}
           <div className="bg-slate-50/80 rounded-2xl p-6 border border-slate-200/80 flex flex-col justify-between">
             <div>
               <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-4">
@@ -90,7 +85,6 @@ export default App;`;
           </div>
         </div>
 
-        {/* Code Example & Interactive Breakdown */}
         <div className="bg-slate-50 rounded-2xl border border-slate-200/90 p-6 sm:p-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between pb-4 border-b border-slate-200 gap-4">
             <div>
@@ -99,7 +93,6 @@ export default App;`;
               </h3>
             </div>
 
-            {/* Interactive Toggle Button */}
             <div className="flex items-center gap-3 bg-white px-3.5 py-1.5 rounded-xl border border-slate-200 shadow-2xs">
               <button
                 onClick={() => setIsLoggedIn(!isLoggedIn)}
@@ -117,12 +110,10 @@ export default App;`;
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mt-6">
-            {/* Left: Code Snippet */}
             <div className="lg:col-span-7">
               <CodeBlock code={sampleCode} title="App.jsx" />
             </div>
 
-            {/* Right: Live Interactive Output Box */}
             <div className="lg:col-span-5 space-y-4">
               <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-xs text-left">
                 <div
@@ -144,7 +135,6 @@ export default App;`;
                 </div>
               </div>
 
-              {/* Expected Output Cards */}
               <div className="space-y-2.5 text-left">
                 <div className="p-3.5 rounded-xl bg-white border border-slate-200 text-xs">
                   <span className="font-bold text-slate-800 block mb-0.5">
@@ -169,7 +159,6 @@ export default App;`;
             </div>
           </div>
 
-          {/* Line-by-Line Explanation */}
           <div className="mt-8 pt-6 border-t border-slate-200 text-left">
             <h4 className="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
               <Info size={18} className="text-indigo-600" />
